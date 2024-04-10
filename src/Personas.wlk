@@ -2,6 +2,7 @@ object olivia {
 	
 	var concentracion = 6
 	
+	method concentracion() = concentracion //necesario para test
 	
 	method gradoDeConcentracion() = concentracion
 	
@@ -55,7 +56,7 @@ object bruno{
 		esFeliz = false
 	}
 	
-	method estaPerfecto() = esFeliz and not(tieneSed) and peso.between(50,70)
+	method estaPerfecto() = esFeliz and not(tieneSed) and peso.between(5000,7000)
 	
 	method medioDiaEnCasa(){
 		self.comeFideos()
@@ -70,6 +71,8 @@ object bruno{
 object ramiro{
 	var contracturado = 0
 	var pielGrasosa = false
+	
+	method contracturado() = contracturado //test
 	
 	method recibirMasaje(){
 		contracturado = 0.max(contracturado - 2)

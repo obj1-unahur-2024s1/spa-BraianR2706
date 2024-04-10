@@ -1,0 +1,31 @@
+import Personas.*
+import spa.*
+
+test "La concentración de Olivia varia segun las interacciones" {
+
+	olivia.banoDeVapor()
+	olivia.recibirMasaje()
+	olivia.discutir()
+	assert.that(olivia.concentracion() != 6)
+
+}
+
+test "spa puede atender a olivia"{
+	spa.atender(olivia)
+	assert.that(olivia.concentracion() == 9)
+}
+
+test "Dia de reajo para ramiro"{
+	ramiro.jugarPaddle()
+	ramiro.comerBigMac()
+	ramiro.jugarPaddle()
+	assert.equals(ramiro.contracturado(), 6)
+}
+
+test "Dia libre Bruno"{
+	bruno.banoDeVapor()
+	bruno.comeFideos()
+	bruno.recibirMasaje()
+	bruno.tomarAgua()
+	assert.that(bruno.estaPerfecto())
+}
